@@ -12,6 +12,6 @@ Then we trained the NeRF for a selected folder of COLMAP data by running the com
 
 We rendered many frames from the NeRFs to generate our training images, and these are held in the `f1tenth_nerf/renders` directory. This directory contains both subdirectories containing the individual rendered frames, as well as videos of the NeRF environments.
 
-Given our NeRF renderings, we trained our model using the file 
+Given our NeRF renderings, we trained our model using the file `train_and_validation.py`, provided in this repository. Also provided is our dataset file, `dataset.csv` which is a list of poses alongside the NeRF rendering and the action taken by pure pursuit corresponding to each pose. `train_and_validation.py` references `dataset.csv`, which in turn references the NeRF-rendered image files in `f1tenth_nerf.zip`. Also note that `train_and_validation.py` contains an absolute file path in Line 24, so you will have to change the path here to your home directory in order to run `train_and_validation.py` yourself.
 
 
